@@ -1,14 +1,13 @@
 <?php
     session_start();
-    require_once("config.php");
-    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $link = mysqli_connect(DB_SERVER);
 
-    if($_SESSION["loggedin"] == true){
-        $_SESSION["wedges"] = $link->query("SELECT wedges FROM users WHERE id = " .$_SESSION["id"])->fetch_object()->wedges;
-    }else{
-        header("location: wallet.php");
-        exit;
-    }
+    // if($_SESSION["loggedin"] == true){
+    //     $_SESSION["wedges"] = $link->query("SELECT wedges FROM users WHERE id = " .$_SESSION["id"])->fetch_object()->wedges;
+    // }else{
+    //     header("location: wallet.php");
+    //     exit;
+    // }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -20,7 +19,7 @@
     <head>
         <meta name="language" content="English">
         <title>The Incline | Main</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="icon" href="pics/favicon.ico"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -46,7 +45,7 @@
         </div>
 
         <a id="darkModeBtn" class="dmButton" href="#" onclick="darkMode()" onmouseover="hover()" onmouseout="nothover()"> <image id="moonpic" src="pics/moon.png"></image></a>
-        <a id="darkModeBtn" class="dmButton" href="index.php" onmouseover="hoverH()" onmouseout="nothoverH()" style="height: 15px; width: 15px;  bottom: 11%;"> <image id="housePic" src="pics/house.png"></image></a>
+        <a id="darkModeBtn" class="dmButton" onmouseover="hoverH()" onmouseout="nothoverH()" style="height: 15px; width: 15px;  bottom: 11%;"> <image id="housePic" src="pics/house.png"></image></a>
         <iframe name="votar" style="display:none;"></iframe>
     
         <?php
@@ -63,7 +62,7 @@
     <script>
  
         if(window.innerWidth < 960){
-            window.location = "indexP.php";
+            //window.location = "indexP.php";
         }
         function onload() {
             if(getCookie("darkMode") == "true"){
