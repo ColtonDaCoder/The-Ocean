@@ -13,76 +13,8 @@ Licence URI: http://www.themevault.net/license/
     font-family:"Nasalization";
     src: url("Nasalization.ttf") format("truetype");
   }
-
-a{
-    font-family: "Times New Roman", Times, serif;
-    color: black;
-    text-decoration: none;
-    transition: all ease .3s;
-    display: flex;
-    flex-direction: column;
-    background: rgb(32, 219, 248);
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    padding-right: 1.5vw;
-    padding-left: 1.5vw;
-    font-size: 150%;
-    margin: auto;
-    width: 25%;
-    padding: 10px;
-    text-align: center;
-}
-
-a:hover{
-    background: #4534fd;
-}
-
-.center {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-}
-
-body{
-    background-color: whitesmoke;
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
-}
-
-#darkModeBtn{
-    height: 15px;
-    width: 15px;
-    border-radius: 15px 15px 15px 15px;
-    position: fixed;
-    bottom: 5%;
-    right: 4%;
-}
-
-#logInBtn{
-    width: 200px;
-    border-radius: 15px 15px 15px 15px;
-    position: fixed;
-    top: 5%;
-    right: 4%;
-}
-
-#label{
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
-}
-
-
-#counter{
-    position: fixed;
-    background-color: #4534fd   ;
-    left: 5%;
-    bottom: 4%;
-}
-
-.post{
-    width:15px;
-    height:1.5%;
-}
+  
+  p {
+      border: 2px solid powderblue;
+      margin: 50px;
+  }
