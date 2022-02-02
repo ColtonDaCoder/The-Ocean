@@ -41,7 +41,7 @@
 
                 $loops = 0;
                 $result = mysqli_query($link, "SELECT post_num, _text, likes FROM posts ORDER BY likes DESC");
-                while (($row = mysqli_fetch_array($result)) && ($loops <= 10)) { 
+                while (($row = mysqli_fetch_array($result))) { 
                     echo '<p>'.$row["_text"].'</p>';
                     echo '
                     <form action="main.php" method="POST" style="width:50px;" >
