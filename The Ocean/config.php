@@ -22,8 +22,15 @@
         $sql = "INSERT INTO `posts`(`_text`, `likes`) VALUES ($text, 0)";
         if($link->query($sql)){
         }   
-
         $link->close();
+    }
+
+    function deletePost($post_num){
+        $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        $sql = "DELETE FROM posts WHERE post_num = $post_num";
+        if($link->query($sql)){
+        }   
+        $link->close();  
     }
 
 #posts:
